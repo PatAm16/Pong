@@ -5,9 +5,17 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
 
-    [SerializeField] float velocidade = 0.5f;
+    [SerializeField]
+     float velocidade = 0.5f;
 
-    [SerializeField] float alturaPaddle = 1f;
+    [SerializeField]
+     float alturaPaddle = 1f;
+
+    [SerializeField]
+     KeyCode upKey = KeyCode.UpArrow;
+
+    [SerializeField]
+    KeyCode downKey = KeyCode.DownArrow;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +29,7 @@ public class Paddle : MonoBehaviour
 
 
         //Mover a raquete
-        if(Input.GetKey(KeyCode.UpArrow))
+        if(Input.GetKey(upKey))
         {
             //Sobe
             //transform.position =
@@ -29,7 +37,7 @@ public class Paddle : MonoBehaviour
 
             transform.position += velocidade * Vector3.up * Time.deltaTime;
 
-        } else if (Input.GetKey(KeyCode.DownArrow))
+        } else if (Input.GetKey(downKey))
         {
             //Desce
             //transform.position =
