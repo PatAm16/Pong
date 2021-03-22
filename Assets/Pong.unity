@@ -398,5 +398,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidade: 10
   alturaPaddle: 1
-  upKey: 273
-  downKey: 274
+  upKey: 97
+  downKey: 122
