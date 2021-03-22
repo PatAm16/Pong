@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Olá, vamos divertir-nos!!");
         /* Para andar para a esquerda e para a direita
         * 
         * if (Random.value < 0.5f)
@@ -35,6 +36,7 @@ public class Ball : MonoBehaviour
 
         if (bolafoilancada == false)
         {
+            Debug.Log("Vamos lá!!");
 
             countdown -= Time.deltaTime;
             if (countdown <= 0.0f)
