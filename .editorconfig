@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0642: Instrução empty possivelmente incorreta
+dotnet_diagnostic.CS0642.severity = none

@@ -8,6 +8,9 @@ public class Ball : MonoBehaviour
     [SerializeField]
     float velocidade = 5f;
 
+    bool bolafoilancada = false;
+    float countdown = 2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +26,26 @@ public class Ball : MonoBehaviour
         */
 
         //Para se mover em qualquer direção
-        GetComponent<Rigidbody2D>().velocity = velocidade * Random.insideUnitCircle;
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (bolafoilancada == false)
+        {
+
+            countdown -= Time.deltaTime;
+            if (countdown <= 0.0f)
+            {
+                bolafoilancada = true;
+            }
+
+            if (bolafoilancada == true)
+            { 
+                GetComponent<Rigidbody2D>().velocity = velocidade * Random.insideUnitCircle;
+            }
+        }
     }
 }
