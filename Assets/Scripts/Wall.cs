@@ -5,9 +5,18 @@ using UnityEngine;
 public class Wall : MonoBehaviour
 {
 
+    [SerializeField]
+    ScoreKeeper scoreKeeper;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Boing!");
+        /*
+         * Quando a bola bater, avisamos o ScoreKeeper 
+         * para aumentar a pontuação
+         */
+
+        scoreKeeper.Goal();
+
     }
 
 }
