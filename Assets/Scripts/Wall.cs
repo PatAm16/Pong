@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
+    public enum WallName { Left, Right }
 
     [SerializeField]
     ScoreKeeper scoreKeeper;
+
+    [SerializeField]
+    WallName lado = WallName.Left;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -15,7 +19,8 @@ public class Wall : MonoBehaviour
          * para aumentar a pontuação
          */
 
-        scoreKeeper.Goal();
+        scoreKeeper.Goal(lado);
+       
 
     }
 

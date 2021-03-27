@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class ScoreKeeper : MonoBehaviour
 {
     int leftScore = 0;
     int rightScore = 0;
 
-    public void Goal()
+    public void Goal(Wall.WallName collision)
     {
-        leftScore = leftScore + 1;
-        rightScore =  rightScore + 1;
+        if(collision == Wall.WallName.Right)
+        {
+            leftScore = leftScore + 1;
+        } else if(collision == Wall.WallName.Left)
+        {
+            rightScore = rightScore + 1;
+        }
+ 
         Debug.Log(leftScore + " " + rightScore);
     }
 
