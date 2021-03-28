@@ -1673,6 +1673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca4ba0e2ae1a44008db704fcdb19487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftScoreTxt: {fileID: 751611651}
+  rightScoreTxt: {fileID: 616200107}
 --- !u!1 &1757468564
 GameObject:
   m_ObjectHideFlags: 0
