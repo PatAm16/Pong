@@ -10,7 +10,7 @@ public class Wall : MonoBehaviour
     ScoreKeeper scoreKeeper;
 
     [SerializeField]
-    WallName lado = WallName.Left;
+    WallName wallName = WallName.Left;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,7 +19,7 @@ public class Wall : MonoBehaviour
          * para aumentar a pontuação
          */
 
-        scoreKeeper.Goal(lado);
+        scoreKeeper.Goal(wallName);
        
 
     }

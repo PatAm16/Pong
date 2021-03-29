@@ -21,11 +21,15 @@ public class ScoreKeeper : MonoBehaviour
         if(collision == Wall.WallName.Right)
         {
             leftScore = leftScore + 1;
+            leftScoreTxt.text = leftScore.ToString();
+
         } else if(collision == Wall.WallName.Left)
         {
             rightScore = rightScore + 1;
+            rightScoreTxt.text = rightScore.ToString();
         }
- 
+
+       
         Debug.Log(leftScore + " " + rightScore);
     }
 
